@@ -13,6 +13,7 @@ function createGrid(size) {
   for (let i = 0; i < size * size; i++) {
     let square = document.createElement("div");
     square.classList.add("square");
+    square.addEventListener("mousedown", colorDown);
     square.addEventListener("mouseover", colorSquare);
     board.insertAdjacentElement("beforeend", square);
   }
@@ -69,6 +70,28 @@ function colorSquare() {
     }
   } else {
     mode.textContent = "Mode: NOT Coloring";
+  }
+}
+
+// Changes the background color of a square element based on the selected color mode.
+function colorDown() {
+  const mode = document.querySelector(".mode");
+
+  mode.textContent = "Mode: Coloring";
+
+  switch (color) {
+    case "random":
+      this.style.backgroundColor = `hsl(${Math.random() * 360},100%,50%)`;
+      break;
+    case "select":
+      this.style.backgroundColor = select.value;
+      break;
+    case "white":
+      mode.textContent = "Mode: NOT Coloring";
+      this.style.backgroundColor = color;
+      break;
+    default:
+      this.style.backgroundColor = color;
   }
 }
 
