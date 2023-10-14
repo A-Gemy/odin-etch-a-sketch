@@ -7,7 +7,25 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h2>Etch-a-Sketch</h2>
+    <div class="flex-container">
+      <div class="title">
+        <h2>Etch-a-Sketch</h2>
+      </div>
+      <div class="content">
+        <div class="board"></div>
+        <div class="buttons">
+          <input
+            name="input size"
+            type="text"
+            value="16"
+            placeholder="Size of board - Max 64"
+            onchange="changeSize(this.value)"
+          />
+          <button class="set-size">Set size</button>
+        </div>
+        <p class="error">Input must be between 2 and 64.</p>
+      </div>
+    </div>
 
     <script src="js/main.js"></script>
   </body>
