@@ -10,10 +10,22 @@
     <div class="flex-container">
       <div class="title">
         <h2>Etch-a-Sketch</h2>
+        <p class="mode">Mode: NOT Coloring</p>
       </div>
       <div class="content">
         <div class="board"></div>
         <div class="buttons">
+          <button onclick="changeColor('black')">Black</button>
+          <!-- <button onclick="changeColor('gray')">Gray</button> -->
+          <button onclick="changeColor('random')">Random</button>
+          <button class="opener">
+            Choose color<input
+              type="color"
+              class="btn-invisible"
+              onchange="changeColor('select')"
+            />
+          </button>
+          <button onclick="changeColor('white')">Eraser</button>
           <input
             name="input size"
             type="text"
