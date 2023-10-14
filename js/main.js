@@ -100,6 +100,16 @@ function changeColor(choice) {
   color = choice;
 }
 
+// Resets the background color of all the squares on the board to white.
+function resetBoard() {
+  const board = document.querySelector(".board");
+  const squares = board.querySelectorAll("div");
+
+  squares.forEach((div) => {
+    div.style.backgroundColor = "white";
+  });
+}
+
 // When the button is clicked, it triggers a click event on another element with the class name "btn-invisible".
 document
   .querySelector("button.opener")
