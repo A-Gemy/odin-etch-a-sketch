@@ -96,6 +96,10 @@ input[type="text"] {
   left: 0;
 }
 
+button.set-size {
+  background-color: #3c40c6;
+}
+
 .error {
   display: none;
 }
